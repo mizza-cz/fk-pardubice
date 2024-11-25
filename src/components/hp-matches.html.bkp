@@ -1,0 +1,110 @@
+<section aria-label="Main matches" class="mx-auto mb-10 grid grid-cols-1 sm:container lg:grid-cols-2">
+    <div class="grid grid-cols-heroMatches justify-between gap-4 py-10 px-4 xs:px-8 sm:gap-8 xl:px-20">
+        <div class="flex justify-start">
+            <div class="flex flex-col items-center justify-center gap-2">
+                <img
+                    src="https://www.fchk.cz/znaky/hkr.png"
+                    width="80"
+                    height="80"
+                    class="aspect-square object-contain"
+                    loading="lazy"
+                    alt="Team logo"
+                />
+                <b class="hidden text-center leading-5 sm:block">Hradec Králové</b>
+                <b class="block text-center leading-5 sm:hidden">HKR</b>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <div class="text-center">
+                <time class="font-bold leading-22" datetime="YYYY-MM-DD">sobota 29. října</time>
+                <div class="text-sm font-light leading-normal">14. kolo, FORTUNA:LIGA</div>
+            </div>
+            <a href="match.html" class="group flex justify-center gap-[1px]" title="Přejít na detail zápasu">
+                <span
+                    class="grid h-12 w-12 content-center rounded-[20px_3px_3px_3px] bg-secondary text-center text-2xl font-bold leading-8 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                >
+                    1
+                </span>
+                <span
+                    class="grid h-12 w-12 content-center rounded-[3px_3px_20px_3px] bg-secondary text-center text-2xl font-bold leading-8 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                >
+                    3
+                </span>
+            </a>
+            <div class="grid justify-items-center gap-2">
+                <div class="flex gap-2 text-sm leading-4">
+                    <svg width="13" height="16">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    LOKOTRANS ARÉNA, Ml. Boleslav
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-end">
+            <div class="flex flex-col items-center justify-center gap-2">
+                <img src="/dist/img/logo.svg" width="80" height="80" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+                <b class="hidden text-center leading-5 sm:block">Pardubice</b>
+                <b class="block text-center leading-5 sm:hidden">PCE</b>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-heroMatches justify-between gap-4 bg-gray py-10 px-4 xs:px-8 sm:gap-8 xl:px-20">
+        <div class="flex justify-start">
+            <div class="flex flex-col items-center justify-center gap-2">
+                <img
+                    src="https://fcviktoria.cz/img/logo.png"
+                    width="80"
+                    height="80"
+                    class="aspect-square object-contain"
+                    loading="lazy"
+                    alt="Team logo"
+                />
+                <b class="hidden text-center leading-5 sm:block">FC Viktoria Plzeň</b>
+                <b class="block text-center leading-5 sm:hidden">PLZ</b>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <div class="text-center">
+                <time class="font-bold leading-22" datetime="YYYY-MM-DD">sobota 29. října</time>
+                <div class="text-sm font-light leading-normal">14. kolo, FORTUNA:LIGA</div>
+            </div>
+            <div class="flex justify-center gap-[1px]">
+                <time
+                    class="rounded-[20px_3px_20px_3px] bg-secondary px-6 py-2 text-center text-xl font-bold leading-8 text-white md:text-2xl"
+                    datetime="HH:MM"
+                >
+                    15:00 hod.
+                </time>
+            </div>
+            <div class="grid justify-items-center gap-4">
+                <div class="flex gap-2 text-sm leading-4">
+                    <svg width="13" height="16">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    DOOSAN ARENA
+                </div>
+                <a href="#" target="_blank" class="flex gap-2 text-sm leading-4 hover:underline">
+                    <svg width="25" height="16">
+                        <use xlink:href="#tickets"></use>
+                    </svg>
+                    Vstupenky
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-end">
+            <div class="flex flex-col items-center justify-center gap-2">
+                <img src="/dist/img/logo.svg" width="80" height="80" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+                <b class="hidden text-center leading-5 sm:block">Pardubice</b>
+                <b class="block text-center leading-5 sm:hidden">PCE</b>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto mt-4 flex justify-end lg:col-span-2">
+        <a href="matches.html" class="btn btn-secondary w-full py-4 sm:w-auto sm:py-2">
+            <svg width="14" height="13">
+                <use xlink:href="#button-hamburger"></use>
+            </svg>
+            Všechny zápasy
+        </a>
+    </div>
+</section>

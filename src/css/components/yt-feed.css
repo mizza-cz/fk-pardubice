@@ -1,0 +1,10 @@
+@layer components {
+    .yt-feed-thumbnail::after {
+        content: '';
+        background-color: rgba(37, 54, 115, 0.399831);
+        @apply absolute inset-0 z-10 transition-opacity duration-300 ease-in-out;
+    }
+    .yt-feed-thumbnail:hover::after {
+        @apply touch-none opacity-0;
+    }
+}

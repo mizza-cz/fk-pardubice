@@ -1,0 +1,74 @@
+@@if (played === true) {
+<li class="group relative border-b border-b-gray py-4 first:pt-0">
+    <div class="flex flex-col gap-4 print:flex-row sm:flex-row sm:gap-8">
+        <div class="flex flex-shrink-0 items-center justify-center gap-2 sm:justify-start">
+            <img src="https://www.fchk.cz/znaky/hkr.png" width="48" height="48" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+            <img src="/dist/img/logo.svg" width="48" height="48" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+        </div>
+        <div class="grid grid-cols-1">
+            <div class="flex items-center justify-center gap-2 text-sm leading-4 print:justify-start sm:justify-start">
+                <b>1. kolo</b>
+                <svg width="1" height="5" class="fill-black"><use xlink:href="#divider" class="block"></use></svg>
+                <time datetime="YYYY-MM-DD hh:mm" class="font-light"> 13. 12. 2022, 16:00 </time>
+            </div>
+            <h3 class="text-center text-lg font-bold leading-25 group-hover:underline sm:text-start">
+                <span class="hidden xs:block">FC Hradec Králové – FK Pardubice</span>
+                <span class="block xs:hidden">HKR – PCE</span>
+            </h3>
+        </div>
+        <div class="flex flex-shrink-0 flex-col items-center gap-6 print:ml-auto sm:ml-auto sm:flex-row">
+            <a
+                href="#"
+                target="_blank"
+                class="relative z-10 order-2 flex items-center gap-2 text-sm font-light text-primary hover:underline print:hidden sm:order-1"
+            >
+                <svg width="12" height="16" class="fill-primary"><use xlink:href="#document"></use></svg>
+                Onlajn
+            </a>
+            <div class="order-1 flex justify-center gap-[1px] sm:order-2">
+                <span
+                    class="grid h-10 w-10 content-center rounded-[15px_3px_3px_3px] bg-secondary text-center text-xl font-bold leading-25 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                >
+                    1
+                </span>
+                <span
+                    class="grid h-10 w-10 content-center rounded-[3px_3px_15px_3px] bg-secondary text-center text-xl font-bold leading-25 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                >
+                    3
+                </span>
+            </div>
+        </div>
+    </div>
+    <a href="match.html" class="after:absolute after:inset-0" title="Přejít na detail zápasu"></a>
+</li>
+} @@if (played === false) {
+<li class="border-b border-b-gray py-4 first:pt-0">
+    <div class="flex flex-col gap-4 print:flex-row sm:flex-row sm:gap-8">
+        <div class="flex flex-shrink-0 items-center justify-center gap-2 sm:justify-start">
+            <img src="https://www.fchk.cz/znaky/hkr.png" width="48" height="48" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+            <img src="/dist/img/logo.svg" width="48" height="48" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+        </div>
+        <div class="grid grid-cols-1">
+            <div class="flex items-center justify-center gap-2 text-sm leading-4 print:justify-start sm:justify-start">
+                <b>1. kolo</b>
+                <svg width="1" height="5" class="fill-black"><use xlink:href="#divider" class="block"></use></svg>
+                <time datetime="YYYY-MM-DD hh:mm" class="font-light"> 13. 12. 2022, 16:00 </time>
+            </div>
+            <h3 class="text-center text-lg font-bold leading-25 sm:text-start">
+                <span class="hidden xs:block">FC Hradec Králové – FK Pardubice</span>
+                <span class="block xs:hidden">HKR – PCE</span>
+            </h3>
+        </div>
+        <div class="flex flex-shrink-0 flex-wrap items-center justify-center gap-6 print:hidden sm:ml-auto sm:flex-nowrap sm:justify-start">
+            <a href="article.html" class="relative z-10 flex items-center gap-2 text-sm font-light text-primary hover:underline">
+                <svg width="12" height="16" class="fill-primary"><use xlink:href="#document"></use></svg>
+                Preview
+            </a>
+            <a href="#" target="_blank" class="relative z-10 flex items-center gap-2 text-sm font-light text-primary hover:underline">
+                <svg width="25" height="16" class="fill-primary"><use xlink:href="#tickets"></use></svg>
+                Vstupenky
+            </a>
+        </div>
+    </div>
+</li>
+}

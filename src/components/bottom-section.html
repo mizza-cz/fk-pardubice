@@ -1,0 +1,54 @@
+<div class="pb-10 pt-14 shadow-bottomSection">
+    <div class="container mx-auto grid gap-10">
+        <section aria-label="More articles" class="flex flex-col gap-6">
+            <ul class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                @@for(i = 0; i < 3; i++) {
+                <li>
+                    <article aria-labelledby="sub-article-`+i+`" class="group relative">
+                        <div class="relative mb-4 aspect-video overflow-hidden">
+                            <img
+                                srcset="https://picsum.photos/768/432 768w, https://picsum.photos/440/250 440w, https://picsum.photos/295/166 295w"
+                                sizes="(min-width: 1132px) 408px, 100vw"
+                                src="default-photo.webp"
+                                class="w-full object-cover object-center"
+                                loading="lazy"
+                                width="408"
+                                height="229"
+                                alt=""
+                            />
+                            <div class="absolute right-0 left-0 bottom-2 flex justify-center">
+                                <time
+                                    class="rounded-[20px_3px_20px_3px] bg-secondary px-4 py-2 text-sm font-bold leading-4 text-white group-hover:bg-primary"
+                                    datetime="YYYY-MM-DD"
+                                >
+                                    6. 11. 2022
+                                </time>
+                            </div>
+                        </div>
+                        <h2 id="sub-article-`+i+`" class="px-8 text-center text-xl font-bold leading-25 text-primary group-hover:underline">
+                            Emil Tischler: Budeme končit etapu v Ďolíčku, nejlépe vítězstvím proti Plzni
+                        </h2>
+                        <a href="article.html" class="after:absolute after:inset-0 after:z-40"></a>
+                    </article>
+                </li>
+                }
+            </ul>
+            <div class="flex justify-end">
+                <a href="archive.html" class="btn btn-secondary w-full py-4 sm:w-auto sm:py-2">
+                    <svg width="14" height="13">
+                        <use xlink:href="#button-hamburger"></use>
+                    </svg>
+                    Další články
+                </a>
+            </div>
+        </section>
+        <section aria-label="Banners" class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="transition-opacity duration-300 ease-in-out hover:opacity-75">
+                <img src="https://via.placeholder.com/632x200" loading="lazy" class="mx-auto max-w-full" alt="" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="transition-opacity duration-300 ease-in-out hover:opacity-75">
+                <img src="https://via.placeholder.com/632x200" loading="lazy" class="mx-auto max-w-full" alt="" />
+            </a>
+        </section>
+    </div>
+</div>

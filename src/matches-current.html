@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Aktuální zápasy – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10">
+            <main aria-labelledby="matches-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <h1 id="matches-title" class="mb-2 text-32 font-bold leading-40 text-primary">Aktuální zápasy Muži A</h1>
+
+                    <h2 id="current-week-matches-title" class="mt-8 text-xl font-bold leading-26 text-primary lg:mt-4">Zápasy aktuálního týdne</h2>
+                    <section class="flex flex-col gap-2" aria-labelledby="current-week-matches-title">
+                        <div>
+                            <h3 class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding">
+                                FORTUNA:LIGA
+                            </h3>
+                            <ul>
+                                @@for(i = 0; i < 2; i++) { @@include('./components/current-match-list-item.html', {'played': true}) }
+                                @@include('./components/current-match-list-item.html', {'played': false})
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding">MOL Cup</h3>
+                            <ul>
+                                @@for(i = 0; i < 1; i++) { @@include('./components/current-match-list-item.html', {'played': true}) }
+                                @@include('./components/current-match-list-item.html', {'played': false})
+                            </ul>
+                        </div>
+                    </section>
+
+                    <h2 id="last-week-matches-title" class="mt-8 text-xl font-bold leading-26 text-primary lg:mt-4">Zápasy minulého týdne</h2>
+                    <section class="flex flex-col gap-2" aria-labelledby="last-week-matches-title">
+                        <div>
+                            <h3 class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding">
+                                FORTUNA:LIGA
+                            </h3>
+                            <ul>
+                                @@for(i = 0; i < 4; i++) { @@include('./components/current-match-list-item.html', {'played': true}) }
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'current-matches'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

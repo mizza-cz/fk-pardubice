@@ -1,0 +1,15 @@
+@layer base {
+    /* Select */
+    select.custom-select {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="9" height="14" fill="%23002966" viewBox="0 0 9 14"%3E%3Cpath d="M3.793.293a1 1 0 0 1 1.414 0l3.5 3.5a1 1 0 0 1-1.414 1.414L4.5 2.415 1.707 5.207a1 1 0 0 1-1.32.083l-.094-.083a1 1 0 0 1 0-1.414l3.5-3.5Zm-3.5 8a1 1 0 0 1 1.414 0L4.5 11.085l2.793-2.792a1 1 0 0 1 1.32-.083l.094.083a1 1 0 0 1 0 1.414l-3.5 3.5a1 1 0 0 1-1.414 0l-3.5-3.5a1 1 0 0 1 0-1.414Z"/%3E%3C/svg%3E');
+        background-position: right 1.5rem center;
+        @apply min-h-[54px] w-full appearance-none rounded border-2 border-secondary bg-gray bg-no-repeat py-3 pl-6 pr-14 text-sm font-bold leading-none text-secondary focus:outline-offset-0 
+            sm:min-h-max sm:w-auto;
+    }
+
+    /* Custom input */
+    input.custom-input {
+        @apply min-h-[54px] w-full rounded border-2 border-secondary bg-gray py-3 px-6 text-sm font-bold leading-none text-secondary 
+        placeholder:text-secondary focus:outline-offset-0 focus:placeholder:text-transparent sm:min-h-max;
+    }
+}

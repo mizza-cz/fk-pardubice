@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Statistiky FORTUNA:LIGA 2022/23 – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10">
+            <main aria-labelledby="roster-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <h1 id="roster-title" class="mb-2 text-32 font-bold leading-40 text-primary">Statistiky FORTUNA:LIGA 2022/23</h1>
+
+                    @@include('./components/youth-menu.html', {'page': 'stats'})
+
+                    <div class="mt-4 overflow-x-auto lg:mt-2">
+                        <table class="styled sortable">
+                            <thead>
+                                <tr>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline">#</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" data-sort-by-el="[data-sort-value]">
+                                        Brankáři
+                                    </th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="počet zápasů, v nichž hráč nastoupil">
+                                        Z
+                                    </th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="počet odchytaných minut">Min</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="počet inkasovaných gólů">Ink</th>
+                                    <th
+                                        class="cursor-pointer uppercase underline hover:no-underline"
+                                        title="počet vychytaných nul (pouze odchytá-li 90 minut)"
+                                    >
+                                        Nul
+                                    </th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="vstřelené góly">VG</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="žluté karty">ŽK</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="červené karty">ČK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="whitespace-nowrap">
+                                        <a href="player.html" class="text-primary underline hover:no-underline">
+                                            Jakub
+                                            <span class="uppercase" data-sort-value>Markovič</span>
+                                        </a>
+                                    </td>
+                                    <td>17</td>
+                                    <td>1530</td>
+                                    <td>29</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>99</td>
+                                    <td class="whitespace-nowrap">
+                                        <a href="player.html" class="text-primary underline hover:no-underline">
+                                            Florin
+                                            <span class="uppercase" data-sort-value>NIȚĂ</span>
+                                        </a>
+                                    </td>
+                                    <td>13</td>
+                                    <td>1254</td>
+                                    <td>24</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 overflow-x-auto">
+                        <table class="styled sortable">
+                            <thead>
+                                <tr>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline">#</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" data-sort-by-el="[data-sort-value]">
+                                        Hráči v poli
+                                    </th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="post hráče">P</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="počet zápasů, v nichž hráč nastoupil">
+                                        Z
+                                    </th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="počet odchytaných minut">Min</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="góly">G</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="asistence na gól">A</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="žluté karty">ŽK</th>
+                                    <th class="cursor-pointer uppercase underline hover:no-underline" title="červené karty">ČK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for (i = 0; i < 4; i++) {
+                                <tr>
+                                    <td>24</td>
+                                    <td class="whitespace-nowrap">
+                                        <a href="player.html" class="text-primary underline hover:no-underline">
+                                            Martin
+                                            <span class="uppercase" data-sort-value>Chlumecký</span>
+                                        </a>
+                                    </td>
+                                    <td>obránce</td>
+                                    <td>17</td>
+                                    <td>1543</td>
+                                    <td>7</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>64</td>
+                                    <td class="whitespace-nowrap">
+                                        <a href="player.html" class="text-primary underline hover:no-underline">
+                                            Vojtěch
+                                            <span class="uppercase" data-sort-value>Sychra</span>
+                                        </a>
+                                    </td>
+                                    <td>záložník</td>
+                                    <td>17</td>
+                                    <td>1543</td>
+                                    <td>7</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>64</td>
+                                    <td class="whitespace-nowrap">
+                                        <a href="player.html" class="text-primary underline hover:no-underline">
+                                            Colet
+                                            <span class="uppercase" data-sort-value>Kapanga</span>
+                                        </a>
+                                    </td>
+                                    <td>útočník</td>
+                                    <td>17</td>
+                                    <td>1543</td>
+                                    <td>7</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <script src="/dist/js/sortable.js"></script>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'stats'})
+                @@include('./components/aside-menu.html', {'page': 'seasons'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

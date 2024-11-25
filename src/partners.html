@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Titulek statické stránky – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="mx-auto mb-14 grid grid-cols-3 gap-10 pt-10 xs:container">
+            <main aria-label="Partneři" class="col-span-3 lg:col-span-2">
+                <div class="grid gap-10 px-4 xs:px-0 xl:px-72">
+                    <section aria-labelledby="partners-category-1">
+                        <h2 id="partners-category-1" class="mb-6 text-32 font-bold leading-40 text-primary">Generální partner klubu</h2>
+                        <div class="grid grid-cols-1 gap-5 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                            @@for (i = 0; i < 1; i++) {
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="https://via.placeholder.com/184x119" loading="lazy" class="aspect-3/2 w-full object-contain" alt="" />
+                            </a>
+                            }
+                        </div>
+                    </section>
+                    <section aria-labelledby="partners-category-2">
+                        <h2 id="partners-category-2" class="mb-6 text-32 font-bold leading-40 text-primary">Partneři klubu</h2>
+                        <div class="grid grid-cols-1 gap-5 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                            @@for (i = 0; i < 3; i++) {
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="https://via.placeholder.com/184x119" loading="lazy" class="aspect-3/2 w-full object-contain" alt="" />
+                            </a>
+                            }
+                        </div>
+                    </section>
+                    <section aria-labelledby="partners-category-3">
+                        <h2 id="partners-category-3" class="mb-6 text-32 font-bold leading-40 text-primary">Partneři klubu</h2>
+                        <div class="grid grid-cols-1 gap-5 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+                            @@for (i = 0; i < 7; i++) {
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="https://via.placeholder.com/184x119" loading="lazy" class="aspect-3/2 w-full object-contain" alt="" />
+                            </a>
+                            }
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 px-4 xs:px-0 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'page'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

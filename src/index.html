@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <main>
+            <!-- prettier-ignore -->
+            <p class="p-4 font-bold text-center bg-green-500 text-secondary-dark">
+                Právě jste se registroval/a k odběru našeho newsletteru! Děkujeme.
+            </p>
+            <p class="bg-primary-light p-4 text-center font-bold text-primary-dark">Něco se nepovedlo, zkuste to prosím znovu.</p>
+            @@include('./components/topstory.html') @@include('./components/hp-matches.html') @@include('./components/hp-news.html')
+            <section aria-label="Newsletter" class="mb-10 bg-mainPattern bg-cover bg-center">
+                <div class="mx-auto flex flex-col items-start gap-4 px-4 py-8 xs:items-center md:flex-row md:justify-around lg:container">
+                    <b id="newsletter-desc" class="text-xl leading-26 text-white md:max-w-[238px]">Chceš dostávat pravidelné informace z klubu?</b>
+                    <form class="flex w-full flex-col items-stretch xs:flex-row sm:w-auto">
+                        <input
+                            aria-describedby="newsletter-desc"
+                            type="email"
+                            class="custom-input !rounded-none !border-0 !text-base !font-light placeholder:!text-black sm:min-w-[255px]"
+                            placeholder="Zadej e-mailovou adresu"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            class="btn btn-secondary whitespace-nowrap rounded-none py-4 xs:py-2"
+                            title="Přihlásit se k odběru novinek"
+                        >
+                            Přihlásit se
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <section aria-label="Banners" class="container mx-auto mb-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="transition-opacity duration-300 ease-in-out hover:opacity-75">
+                    <img src="https://via.placeholder.com/632x200" loading="lazy" class="mx-auto max-w-full" alt="" />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="transition-opacity duration-300 ease-in-out hover:opacity-75">
+                    <img src="https://via.placeholder.com/632x200" loading="lazy" class="mx-auto max-w-full" alt="" />
+                </a>
+            </section>
+            <!-- prettier-ignore -->
+            @@include('./components/yt-feed.html')
+            @@include('./components/hp-teams.html', {'categories': [ 'Ženy A', 'WU-18', 'WU-15', 'WU-13', 'WU-11', 'WU-9', 'U-19', 'U-18', 'U-17', 'U-16', 'U-15', 'U-14', 'U-13']})
+        </main>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

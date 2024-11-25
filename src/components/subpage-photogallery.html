@@ -1,0 +1,29 @@
+<ul class="mt-8 grid gap-8 px-4 xs:px-0 sm:grid-cols-3">
+    @@for(i = 0; i < 2; i++) {
+    <li>
+        <a href="https://picsum.photos/855/480" data-fslightbox title="Zobrazit fotografii">
+            <img
+                srcset="https://picsum.photos/295/166 295w, https://picsum.photos/440/250 440w"
+                sizes="(min-width: 672px) 295px, 100vw"
+                width="264"
+                height="149"
+                class="aspect-video w-full object-cover object-center hover:opacity-75"
+                alt=""
+            />
+        </a>
+    </li>
+    }
+    <li>
+        <a href="photogallery-detail.html" class="relative block" title="Zobrazit celé album" data-gallery-count="+22">
+            <img
+                srcset="https://picsum.photos/295/166 295w, https://picsum.photos/440/250 440w"
+                sizes="(min-width: 672px) 295px, 100vw"
+                width="264"
+                height="149"
+                class="aspect-video w-full object-cover object-center hover:opacity-75"
+                alt=""
+            />
+        </a>
+    </li>
+</ul>
+<script async src="/dist/js/gallery.js"></script>

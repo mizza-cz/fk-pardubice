@@ -1,0 +1,104 @@
+{
+    "menu": [
+        {
+            "name": "Soupiska",
+            "url": "roster.html?category=XXX"
+        },
+        {
+            "name": "Realizační tým",
+            "url": "staff.html?category=XXX"
+        },
+        {
+            "name": "Zápasy",
+            "url": "matches.html?category=XXX"
+        }
+    ],
+    "matches": {
+        "played": {
+            "date": "2023-02-12",
+            "time": "18:00",
+            "round": "14. kolo",
+            "league": "FORTUNA:LIGA",
+            "url": "match.html?id=123",
+            "tickets": "",
+            "score": {
+                "home": 2,
+                "visitor": 3
+            },
+            "homeTeam": {
+                "name": "Pardubice",
+                "shortcut": "PCE",
+                "logo": "/dist/img/logo.svg"
+            },
+            "visitorTeam": {
+                "name": "Hr. Králové",
+                "shortcut": "HKR",
+                "logo": "https://www.fchk.cz/znaky/hkr.png"
+            }
+        },
+        "future": {
+            "date": "2023-02-22",
+            "time": "18:00",
+            "round": "15. kolo",
+            "league": "FORTUNA:LIGA",
+            "url": "",
+            "tickets": "",
+            "stadium": "EDEN, Slavia Praha",
+            "score": {
+                "home": 2,
+                "visitor": 3
+            },
+            "homeTeam": {
+                "name": "Pardubice",
+                "shortcut": "PCE",
+                "logo": "/dist/img/logo.svg"
+            },
+            "visitorTeam": {
+                "name": "FC Viktoria Plzeň",
+                "shortcut": "PLZ",
+                "logo": "https://fcviktoria.cz/img/logo.png"
+            }
+        }
+    },
+    "articles": {
+        "archive": "archive.php?category=XXX",
+        "list": [
+            {
+                "title": "Dominik Kostka: Proč je klíčové, aby obránci doplňovali útočníky?",
+                "perex": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque pariatur accusamus mollitia ex perspiciatis velit, quasi recusandae iure culpa magni doloremque, repudiandae voluptates quis tempora neque esse, dolore corporis harum.",
+                "category": "B-tým",
+                "date": "2022-06-12",
+                "url": "article.html?1",
+                "thumbnail": {
+                    "large": "https://picsum.photos/440/250",
+                    "small": "https://picsum.photos/295/166",
+                    "default": "default-image.webp"
+                }
+            },
+            {
+                "title": "Podporu fanoušků vždy vnímáme, říká Matěj Helešic",
+                "perex": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque pariatur accusamus mollitia ex perspiciatis velit, quasi recusandae iure culpa magni doloremque, repudiandae voluptates quis tempora neque esse, dolore corporis harum.",
+                "category": "B-tým - zápasy",
+                "date": "2022-06-04",
+                "url": "article.html?2",
+                "thumbnail": {
+                    "large": "https://picsum.photos/440/250",
+                    "small": "https://picsum.photos/295/166",
+                    "default": "default-image.webp"
+                }
+            },
+            {
+                "title": "Dominik Kostka: Proč je klíčové, aby obránci doplňovali útočníky?",
+                "perex": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque pariatur accusamus mollitia ex perspiciatis velit, quasi recusandae iure culpa magni doloremque, repudiandae voluptates quis tempora neque esse, dolore corporis harum.",
+                "category": "B-tým - Naše hvězdy",
+                "date": "2022-06-20",
+                "url": "article.html?3",
+                "thumbnail": {
+                    "large": "https://picsum.photos/440/250",
+                    "small": "https://picsum.photos/295/166",
+                    "default": "default-image.webp"
+                }
+            }
+        ]
+    }
+}

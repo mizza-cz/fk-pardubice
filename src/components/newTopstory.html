@@ -1,0 +1,183 @@
+<section aria-label="TOP articles" class="newTopstory mt-2">
+    <div class="container mx-auto grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <div class="col-span-1 flex flex-col gap-6 lg:col-span-2">
+            <div class="topstory-slider relative z-10 h-full">
+                @@for(i = 0; i < 5; i++) {
+                <article aria-labelledby="topstory-title-`+i+`" class="relative h-full border-t-4 border-t-primary">
+                    <div class="relative flex h-full w-full justify-between md:flex-row md:items-center xl:gap-10">
+                        <div
+                            class="absolute bottom-0 left-0 z-10 box-content flex h-full flex-col justify-end px-8 pb-8"
+                            style="
+                                background: linear-gradient(0deg, rgba(235, 0, 0, 0.6) 0%, rgba(235, 0, 0, 0) 100%) no-repeat;
+                                background-size: 100% 40%;
+                                background-position: bottom;
+                                height: 100%;
+                            "
+                        >
+                            >
+                            <div class="mt-auto">
+                                <h1 id="topstory-title-`+i+`" class="mb-4 text-2xl font-bold text-white md:text-3xl lg:text-40 lg:leading-48">
+                                    📸 Vyhráli jsme derby s Hradcem, vstřelili jsme tři branky
+                                </h1>
+                                <p class="mb-4 overflow-ellipsis text-lg font-light leading-normal text-white xl:mb-8" style="--text-lines: 3">
+                                    Velká radost zavládla na boleslavském stadionu poté, co rozhodčí Berka odpískal konec zápasu. Pardubáci totiž
+                                    porazili v derby Hradec Králové 3:1 a do tabulky si připsali další tři cenné body.
+                                </p>
+                                <a href="article.html" role="button" class="btn btn-secondary relative z-10">
+                                    <svg width="14" height="13">
+                                        <use xlink:href="#button-hamburger"></use>
+                                    </svg>
+                                    Přečíst článek
+                                </a>
+                            </div>
+                        </div>
+                        <img
+                            style="backdrop-filter: blur(59px)"
+                            srcset="https://picsum.photos/1052/550 1052w, https://picsum.photos/800/400 800w, https://picsum.photos/480/250 480w"
+                            sizes="(min-width: 1132px) 1132px, (min-width: 800px) 600px, 100vw"
+                            src="default-photo.webp"
+                            width="1052"
+                            height="550"
+                            class="order-1 h-full self-start object-cover object-center md:order-2"
+                            loading="lazy"
+                            alt=""
+                        />
+                    </div>
+                    <a href="article.html" class="after:absolute after:inset-0"></a>
+                </article>
+                }
+            </div>
+        </div>
+        <div class="col-span-1 flex h-full flex-col gap-6 md:flex-row lg:flex-col newTopstory-aside">
+            <div class="flex h-full w-full flex-col items-center justify-center border-t-4 border-t-secondary bg-gray py-10">
+                <div class="mb-2 flex flex-col items-center">
+                    <img src="/dist/img/oris.png" loading="lazy" width="80px" height="32px" alt="" />
+                </div>
+                <div class="mb-8 text-center">
+                    <div class="text-xs font-light">Partnerem příštího zápasu</div>
+                </div>
+                <div class="timer" role="timer" aria-label="A timer, counting down to {{ eventName }}" data-endtime="2024-11-30T02:00">
+                    <span class="timer__item" id="timer-days-1">
+                        <span class="timer__label timer__label-days" id="countdown-days-label-1">dní</span>
+                        <span class="timer__value" id="countdown-days-1">{{ days }}</span>
+                    </span>
+                    <span class="timer__item" id="timer-hours-1">
+                        <span class="timer__label" id="countdown-hours-label-1">hodin</span>
+                        <span class="timer__value" id="countdown-hours-1">{{ hours }}</span>
+                    </span>
+                    <span class="timer__item" id="timer-minutes-1">
+                        <span class="timer__label" id="countdown-minutes-label-1">minut</span>
+                        <span class="timer__value" id="countdown-minutes-1">{{ minutes }}</span>
+                    </span>
+                    <span class="timer__item" id="timer-seconds-1">
+                        <span class="timer__label" id="countdown-seconds-label-1">vteřin</span>
+                        <span class="timer__value" id="countdown-seconds-1">{{ seconds }}</span>
+                    </span>
+                </div>
+
+                <div class="mb-8 text-center">
+                    <time class="text-xs font-bold">sobota 29. 10. od 18.00 hod</time>
+                </div>
+                <div class="flex justify-center gap-6">
+                    <div class="flex">
+                        <div class="flex flex-col items-center justify-center gap-2">
+                            <img
+                                src="https://fcviktoria.cz/img/logo.png"
+                                width="64"
+                                height="64"
+                                class="aspect-square object-contain"
+                                loading="lazy"
+                                alt="Team logo"
+                            />
+                            <b class="hidden text-center leading-5 sm:block">FC Viktoria Plzeň</b>
+                            <b class="block text-center leading-5 sm:hidden">HKR</b>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex flex-col items-center justify-center gap-2">
+                            <img
+                                src="/dist/img/logo.svg"
+                                width="64"
+                                height="64"
+                                class="aspect-square object-contain"
+                                loading="lazy"
+                                alt="Team logo"
+                            />
+                            <b class="hidden text-center leading-5 text-secondary sm:block">FC Pardubice</b>
+                            <b class="block text-center leading-5 text-secondary sm:hidden">PCE</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 flex flex-col items-center">
+                    <a href="article.html" role="button" class="btn btn-secondary relative z-10 -lg:hidden">
+                        <svg width="14" height="13" class="fill-primary">
+                            <use xlink:href="#tickets"></use>
+                        </svg>
+                        Vstupenky
+                    </a>
+                </div>
+                <div class="mt-8 flex flex-col items-center">
+                    <a href="article.html" class="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                        <svg width="12" height="16" class="fill-primary"><use xlink:href="#document"></use></svg>
+                        Preview
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    // Select all timer elements
+    let countItems = document.querySelectorAll('.timer');
+
+    if (countItems.length) {
+        countItems.forEach(function (countItem, index) {
+            initializeTimer(countItem, index + 1);
+        });
+    }
+
+    function initializeTimer(countItem, timerIndex) {
+        let daysElement = document.getElementById(`countdown-days-${timerIndex}`);
+        let hoursElement = document.getElementById(`countdown-hours-${timerIndex}`);
+        let minutesElement = document.getElementById(`countdown-minutes-${timerIndex}`);
+        let secondsElement = document.getElementById(`countdown-seconds-${timerIndex}`);
+
+        if (!countItem.dataset.endtime) {
+            console.error(`Element with index ${timerIndex} does not have 'data-endtime' attribute.`);
+            return;
+        }
+
+        let deadline = new Date(countItem.dataset.endtime).getTime();
+        if (isNaN(deadline)) {
+            console.error(`Invalid date format in 'data-endtime': ${countItem.dataset.endtime}`);
+            return;
+        }
+
+        let timerInterval;
+
+        function updateTimer() {
+            let currentTime = new Date().getTime();
+            let timeDifference = deadline - currentTime;
+
+            if (timeDifference <= 0) {
+                countItem.innerHTML = `<b class="py-3 text-uppercase" style="grid-column: span 4">Událost již začala</b>`;
+                clearInterval(timerInterval);
+                return;
+            }
+
+            let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            if (daysElement) daysElement.textContent = days;
+            if (hoursElement) hoursElement.textContent = hours;
+            if (minutesElement) minutesElement.textContent = minutes;
+            if (secondsElement) secondsElement.textContent = seconds;
+        }
+
+        updateTimer(); // Initial call to display the timer immediately
+        timerInterval = setInterval(updateTimer, 1000); // Update every second
+    }
+</script>

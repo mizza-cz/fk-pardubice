@@ -1,0 +1,76 @@
+/* Base */
+@tailwind base;
+@import './base/typography.css';
+@import './base/form.css';
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply bg-white pt-10;
+    }
+
+    @media print {
+        header,
+        aside,
+        footer,
+        #onlajny-sticker,
+        #es-strip-container,
+        .shadow-bottomSection,
+        #cc--main,
+        [aria-label='Partners'] {
+            display: none !important;
+        }
+    }
+}
+/* Components */
+@tailwind components;
+/*@import './components/header';*/
+@import './components/menu';
+@import './components/button';
+@import './components/dialog';
+@import './components/gallery';
+@import './components/spinner';
+@import './components/article';
+@import './components/yt-feed';
+@import './components/teams';
+@layer components {
+    .matches-slider-button-desktop {
+        @apply hidden;
+    }
+    .matches-slider-button-mobile {
+        @apply block;
+    }
+    @media (min-width: 1460px) {
+        .matches-slider-button-desktop {
+            @apply block;
+        }
+        .matches-slider-button-mobile {
+            @apply hidden;
+        }
+    }
+    @media (min-width: 992px) {
+        .matches-slider > li.bg-white.tns-slide-active > div {
+            box-shadow: -2px 0 0 0 HSL(225, 24%, 93%);
+        }
+    }
+}
+
+/* Utilities */
+@tailwind utilities;
+@layer utilities {
+    .overflow-ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: var(--text-lines);
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        /* style="--text-lines: 3;" */
+    }
+    .mask-to-transparent {
+        mask-image: linear-gradient(180deg, #000 75%, transparent);
+    }
+}
+
+/* Libs */
+@import './../../node_modules/tiny-slider/dist/tiny-slider';

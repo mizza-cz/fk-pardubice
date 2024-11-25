@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Zápasy – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10 print:flex print:max-w-full print:flex-col">
+            <main aria-labelledby="matches-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <div class="mb-2 flex flex-wrap items-center justify-between gap-4">
+                        <h1 id="matches-title" class="text-32 font-bold leading-40 text-primary">Zápasy Muži A</h1>
+                        <button class="ml-auto flex w-full items-center gap-2 text-xs hover:underline print:hidden xs:w-max" onclick="window.print()">
+                            <svg width="16" height="16">
+                                <use xlink:href="#printer"></use>
+                            </svg>
+                            Tisk rozpisu
+                        </button>
+                    </div>
+
+                    @@include('./components/youth-menu.html', {'page': 'matches'})
+
+                    <div class="flex flex-col gap-2">
+                        <section aria-labelledby="matches-2023-title">
+                            <h2
+                                id="matches-2023-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding"
+                            >
+                                FORTUNA:LIGA
+                            </h2>
+                            <ul>
+                                @@for(i = 0; i < 3; i++) { @@include('./components/match-list-item.html', {'played': true}) } @@for(i = 0; i < 2; i++)
+                                { @@include('./components/match-list-item.html', {'played': false}) }
+                            </ul>
+                        </section>
+                        <section aria-labelledby="matches-2023poh-title">
+                            <h2
+                                id="matches-2023poh-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding"
+                            >
+                                MOL Cup
+                            </h2>
+                            <ul>
+                                @@for(i = 0; i < 3; i++) { @@include('./components/match-list-item.html', {'played': true}) }
+                                <li id="current-match" class="border-b border-b-gray py-4 first:pt-0">
+                                    <div class="flex flex-col gap-4 print:flex-row sm:flex-row sm:gap-8">
+                                        <div class="flex flex-shrink-0 items-center justify-center gap-2 sm:justify-start">
+                                            <img
+                                                src="https://www.fchk.cz/znaky/hkr.png"
+                                                width="48"
+                                                height="48"
+                                                class="aspect-square object-contain"
+                                                loading="lazy"
+                                                alt="Team logo"
+                                            />
+                                            <img
+                                                src="/dist/img/logo.svg"
+                                                width="48"
+                                                height="48"
+                                                class="aspect-square object-contain"
+                                                loading="lazy"
+                                                alt="Team logo"
+                                            />
+                                        </div>
+                                        <div class="grid grid-cols-1">
+                                            <div
+                                                class="flex items-center justify-center gap-2 text-sm leading-4 print:justify-start sm:justify-start"
+                                            >
+                                                <b>1. kolo</b>
+                                                <svg width="1" height="5" class="fill-black"><use xlink:href="#divider" class="block"></use></svg>
+                                                <time datetime="YYYY-MM-DD hh:mm" class="font-light"> 13. 12. 2022, 16:00 </time>
+                                            </div>
+                                            <h3 class="text-center text-lg font-bold leading-25 sm:text-start">
+                                                <span class="hidden xs:block">FC Hradec Králové – FK Pardubice</span>
+                                                <span class="block xs:hidden">HKR – PCE</span>
+                                            </h3>
+                                        </div>
+                                        <div
+                                            class="flex flex-shrink-0 flex-wrap items-center justify-center gap-6 print:hidden sm:ml-auto sm:flex-nowrap sm:justify-start"
+                                        >
+                                            <a
+                                                href="article.html"
+                                                class="relative z-10 flex items-center gap-2 text-sm font-light text-primary hover:underline"
+                                            >
+                                                <svg width="12" height="16" class="fill-primary"><use xlink:href="#document"></use></svg>
+                                                Preview
+                                            </a>
+                                            <a
+                                                href="#"
+                                                target="_blank"
+                                                class="relative z-10 flex items-center gap-2 text-sm font-light text-primary hover:underline"
+                                            >
+                                                <svg width="25" height="16" class="fill-primary"><use xlink:href="#tickets"></use></svg>
+                                                Vstupenky
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                @@for(i = 0; i < 2; i++) { @@include('./components/match-list-item.html', {'played': false}) }
+                            </ul>
+                        </section>
+                        <section aria-labelledby="matches-2023prip-title">
+                            <h2
+                                id="matches-2023prip-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-6 lg:top-desktopPadding"
+                            >
+                                Přípravné zápasy
+                            </h2>
+                            <ul>
+                                @@for(i = 0; i < 3; i++) { @@include('./components/match-list-item.html', {'played': true}) } @@for(i = 0; i < 2; i++)
+                                { @@include('./components/match-list-item.html', {'played': false}) }
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'competitions'})
+                @@include('./components/aside-menu.html', {'page': 'seasons'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<section aria-label="TOP articles" class="bg-mainPattern bg-cover bg-center">
+    <div class="relative mx-auto max-w-[1920px]">
+        <div class="topstory-slider relative z-10">
+            @@for(i = 0; i < 4; i++) {
+            <article aria-labelledby="topstory-title-`+i+`" class="relative">
+                <div class="flex flex-col justify-between md:min-h-[340px] md:flex-row md:items-center md:pl-4 lg:min-h-[550px] xl:gap-10">
+                    <div class="order-2 px-4 pb-16 pt-4 md:order-1 md:px-0 md:py-14 lg:max-w-[520px] lg:py-12">
+                        <h1 id="topstory-title-`+i+`" class="mb-4 text-2xl font-bold text-white hover:underline md:text-3xl lg:text-40 lg:leading-48">
+                            📸 Vyhráli jsme derby s Hradcem, vstřelili jsme tři branky
+                        </h1>
+                        <p class="mb-4 overflow-ellipsis text-lg font-light leading-normal text-white xl:mb-8" style="--text-lines: 3">
+                            Velká radost zavládla na boleslavském stadionu poté, co rozhodčí Berka odpískal konec zápasu. Pardubáci totiž porazili v
+                            derby Hradec Králové 3:1 a do tabulky si připsali další tři cenné body.
+                        </p>
+                        <a href="article.html" role="button" class="btn btn-secondary relative z-10 -lg:hidden">
+                            <svg width="14" height="13">
+                                <use xlink:href="#button-hamburger"></use>
+                            </svg>
+                            Přečíst článek
+                        </a>
+                    </div>
+                    <img
+                        srcset="https://picsum.photos/1052/550 1052w, https://picsum.photos/800/400 800w, https://picsum.photos/480/250 480w"
+                        sizes="(min-width: 1132px) 1132px, (min-width: 800px) 600px, 100vw"
+                        src="default-photo.webp"
+                        width="1052"
+                        height="550"
+                        class="topstory-thumbnail order-1 self-start object-cover object-center md:order-2"
+                        loading="lazy"
+                        alt=""
+                    />
+                </div>
+                <a href="article.html" class="after:absolute after:inset-0"></a>
+            </article>
+            }
+        </div>
+    </div>
+</section>

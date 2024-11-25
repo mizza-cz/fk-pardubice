@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Pardubice vs. Hradec Králové (2:1) – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="mx-auto mb-14 grid grid-cols-3 gap-10 pt-10 xs:container">
+            <main aria-labelledby="subpage-title" class="col-span-3 lg:col-span-2">
+                <div class="px-4 xs:px-0 xl:px-72">
+                    <h1 id="subpage-title" class="mb-6 text-32 font-bold leading-40 text-primary">Pardubice vs. Hradec Králové (2:1)</h1>
+                </div>
+                <ul class="grid gap-8 px-4 xs:px-0 sm:grid-cols-3">
+                    @@for(i = 0; i < 17; i++) {
+                    <li>
+                        <a href="https://picsum.photos/855/480" data-fslightbox title="Zobrazit fotografii">
+                            <img
+                                srcset="https://picsum.photos/295/166 295w, https://picsum.photos/440/250 440w"
+                                sizes="(min-width: 672px) 295px, 100vw"
+                                width="264"
+                                height="149"
+                                class="aspect-video w-full object-cover object-center hover:opacity-75"
+                                alt=""
+                            />
+                        </a>
+                    </li>
+                    }
+                </ul>
+                <script async src="/dist/js/gallery.js"></script>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 px-4 xs:px-0 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'page'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

@@ -1,0 +1,9 @@
+@layer components {
+    .teams-navigation li button[aria-current='page'] {
+        box-shadow: inset 0 -0.25rem 0 0 HSL(0, 100%, 46%);
+    }
+    .teams-navigation li button:hover:not([aria-current='page']) {
+        box-shadow: inset 0 -0.25rem 0 0 HSLA(0, 100%, 46%, 0.25);
+        @apply opacity-75;
+    }
+}

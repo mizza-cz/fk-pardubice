@@ -1,0 +1,144 @@
+@layer components {
+    /* Menu wrapper */
+    @screen -lg {
+        .menu-wrapper {
+            @apply invisible fixed top-mobile right-0 z-50 h-calcMobileContent w-1/2 touch-none overflow-auto bg-secondary py-4 opacity-0 
+            transition-opacity duration-200;
+        }
+        header:not(.scrolled) .menu-wrapper {
+            @apply absolute h-[calc(100vh_-_120px)];
+        }
+        .menu-wrapper.show {
+            @apply visible touch-auto opacity-100;
+        }
+    }
+    @screen -md {
+        .menu-wrapper {
+            @apply w-full;
+        }
+    }
+
+    /* Item */
+    @screen lg {
+        .menu-item:hover .menu-link {
+            box-shadow: inset 0 -0.25rem 0 0 HSL(0, 100%, 46%);
+        }
+        .menu-item:hover > .submenu {
+            @apply visible opacity-100;
+        }
+    }
+    @screen -lg {
+        .menu-item {
+            @apply w-full;
+        }
+        .menu-item:not(:last-child) {
+            @apply border-b border-b-[rgba(255,255,255,.2)];
+        }
+    }
+
+    /* Link */
+    .menu-link {
+        @apply block px-6 py-4 text-xl font-bold uppercase leading-26 text-primary lg:px-2 lg:pt-[14px] lg:pb-6;
+    }
+    @screen -lg {
+        .menu-link {
+            @apply text-white;
+        }
+        .menu-link[aria-expanded='true'] {
+            @apply bg-white text-primary transition-none;
+        }
+    }
+
+    /* Submenu */
+    @screen lg {
+        .submenu {
+            display: block !important;
+            border-radius: 0 0 20px 3px;
+            @apply invisible absolute min-w-[185px] bg-secondary py-2 text-white opacity-0;
+        }
+    }
+    .submenu:not(.show) {
+        display: none;
+    }
+    @screen -lg {
+        .submenu.show {
+            @apply bg-white;
+        }
+    }
+    .submenu-item.has-submenu > .submenu {
+        @apply top-0 left-full bg-white lg:shadow-2xl;
+    }
+    .submenu-item.has-submenu:hover .submenu {
+        @apply visible opacity-100;
+    }
+
+    /* Submenu Item */
+    .submenu-item {
+        @apply px-4 text-right lg:text-left;
+    }
+    .submenu-item:last-child .submenu-link {
+        @apply pb-4;
+    }
+    @screen -lg {
+        .submenu-item.has-submenu .submenu-item {
+            @apply px-0;
+        }
+    }
+
+    /* Submenu Link */
+    .submenu-link {
+        @apply block whitespace-nowrap px-6 py-2 text-base font-bold uppercase transition-colors duration-150 ease-in-out 
+        lg:px-0 lg:hover:text-primary;
+    }
+    .submenu-item.has-submenu > .submenu-link {
+        @apply flex items-center justify-end gap-3 lg:justify-between;
+    }
+    .submenu-item.has-submenu > .submenu-link svg {
+        @apply fill-white transition-all duration-150 ease-in-out;
+    }
+    .submenu-item.has-submenu:hover > .submenu-link {
+        @apply text-primary;
+    }
+    .submenu-item.has-submenu:hover > .submenu-link svg {
+        @apply fill-primary;
+    }
+    .submenu-item.has-submenu > .submenu .submenu-link {
+        @apply normal-case text-secondary hover:text-primary;
+    }
+    @screen lg {
+        .submenu-item:last-child .submenu-link {
+            @apply pb-2;
+        }
+        .submenu-item:not(:last-child) .submenu-link {
+            @apply border-b border-b-[rgba(255,255,255,.2)];
+        }
+        .has-submenu .submenu-item:not(:last-child) .submenu-link {
+            @apply border-b border-b-secondary;
+        }
+    }
+    @screen -lg {
+        .submenu-link {
+            @apply border-t border-t-[HSL(227_51%_30%)];
+        }
+        .submenu-item.has-submenu > .submenu .submenu-link {
+            @apply px-12;
+        }
+    }
+
+    /* Toggler */
+    .menu-toggler {
+        @apply relative h-10 w-10;
+    }
+    .menu-toggler[aria-expanded='true'] .menu-toggler-open,
+    .menu-toggler[aria-expanded='false'] .menu-toggler-close {
+        @apply scale-0 touch-none opacity-0;
+    }
+    .menu-toggler[aria-expanded='false'] .menu-toggler-open,
+    .menu-toggler[aria-expanded='true'] .menu-toggler-close {
+        @apply scale-100 touch-auto opacity-100;
+    }
+
+    .menu-toggler-icon {
+        @apply absolute top-0 bottom-0 left-0 right-0 m-auto fill-secondary transition-all duration-200 ease-in-out;
+    }
+}

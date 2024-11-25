@@ -1,0 +1,8 @@
+@layer components {
+    dialog {
+        @apply w-full rounded-[20px_3px_20px_3px] p-0 backdrop:block backdrop:bg-black/75 sm:w-2/3;
+    }
+    .dialog-content {
+        @apply p-3;
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Alireza Jahanbakhsh – Profil hráče – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <main class="grid grid-cols-1 gap-10 pb-10">
+            <section aria-labelledby="player-hero-title" class="bg-mainPattern bg-cover bg-center">
+                <div class="container mx-auto grid grid-cols-1 lg:min-h-[550px] lg:grid-cols-2">
+                    <div class="relative order-2 flex justify-end pr-4 sm:items-end lg:order-1 lg:pt-6">
+                        <span
+                            class="absolute left-0 text-9xl font-bold leading-[1em] text-white sm:bottom-12 sm:text-[330px] lg:text-[196px] xl:text-[330px]"
+                        >
+                            39
+                        </span>
+                        <img
+                            src="/dist/img/player.webp"
+                            width="383"
+                            height="526"
+                            class="relative z-10 h-64 w-auto object-contain sm:h-[400px] lg:h-[526px]"
+                            loading="lazy"
+                            alt=""
+                        />
+                    </div>
+                    <div class="order-1 flex items-center py-10 lg:order-2 lg:pl-28">
+                        <div class="flex flex-col text-white">
+                            <h1 id="player-hero-title" class="mb-11 font-bold sm:mb-4">
+                                <span class="block text-32 leading-10">Alireza</span>
+                                <span class="block text-4xl sm:text-5xl sm:leading-48">Jahanbakhsh</span>
+                            </h1>
+                            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                                <div class="flex gap-2">
+                                    <img src="/dist/img/cz.svg" width="21" height="16" loading="lazy" alt="" />
+                                    <b class="text-sm uppercase leading-4">Obránce</b>
+                                </div>
+                                <svg width="1" height="5" class="hidden fill-white sm:block"><use xlink:href="#divider"></use></svg>
+                                <span class="font-light leading-6"> 17. 12. 1993 (30 let)</span>
+                                <svg width="1" height="5" class="hidden fill-white sm:block"><use xlink:href="#divider"></use></svg>
+                                <span class="font-light leading-6"> 178 cm / 68 kg</span>
+                            </div>
+                            <p class="mt-11 font-light leading-6">
+                                Alireza Jahanbakhsh je odchovancem Olomouce. Brzy bylo jasné, že má v sobě velký potenciál. Na svém kontě má starty v
+                                reprezentačních výběrech od 15 do 21 let. Na jaře 2020 pak v sedmnácti letech debutoval v nejvyšší soutěži. V ročníku
+                                2020/21 se pak Daněk postupně vypracoval ve stálého hráče základní sestavy. V létě 2022 přestoupil do Pardubic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section aria-labelledby="player-current-stats-title" aria-label="Current stats" class="container mx-auto flex flex-col gap-6">
+                <h2 id="player-current-stats-title" class="text-32 font-bold leading-10 text-primary">Aktuální statistiky</h2>
+                <div class="overflow-x-auto">
+                    <table class="styled">
+                        <tr>
+                            <th>Sezóna</th>
+                            <th title="počet odehraných zápasů">Z</th>
+                            <th title="počet minut na hřišti">MIN</th>
+                            <th title="vstřelené góly">VG</th>
+                            <th title="žluté karty">ŽK</th>
+                            <th title="červené karty">ČK</th>
+                        </tr>
+                        <tr class="whitespace-nowrap font-light">
+                            <td>
+                                <a href="matches.html" class="text-primary underline hover:no-underline">FORTUNA:LIGA</a>
+                            </td>
+                            <td>10</td>
+                            <td>595</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section aria-labelledby="player-last-games-stats-title" aria-label="Stats - last games" class="container mx-auto flex flex-col gap-6">
+                <h2 id="player-last-games-stats-title" class="text-32 font-bold leading-10 text-primary">Posledních 5 zápasů</h2>
+                <div class="overflow-x-auto">
+                    <table class="styled">
+                        <tr>
+                            <th>Kolo</th>
+                            <th>Datum</th>
+                            <th>Utkání</th>
+                            <th>Skóre</th>
+                            <th title="počet minut na hřišti">MIN</th>
+                            <th title="góly">G</th>
+                            <th title="asistence">A</th>
+                            <th title="žluté karty">ŽK</th>
+                            <th title="červené karty">ČK</th>
+                        </tr>
+                        @@ for (i = 0; i < 5; i++) {
+                        <tr class="whitespace-nowrap font-light">
+                            <td>14. kolo</td>
+                            <td>
+                                <time datetime="YYYY-MM-DD">12. 11. 2022</time>
+                            </td>
+                            <td>FK Pardubice vs SK Slavia Praha</td>
+                            <td>
+                                <a href="match.html" class="text-primary underline hover:no-underline">4:3</a>
+                            </td>
+                            <td>86</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        }
+                    </table>
+                </div>
+                <div class="flex justify-end">
+                    <a href="stats.html" class="btn btn-secondary w-full py-4 sm:w-auto sm:py-2">
+                        <svg width="14" height="13">
+                            <use xlink:href="#button-hamburger"></use>
+                        </svg>
+                        Celkové statistiky
+                    </a>
+                </div>
+            </section>
+            <section aria-labelledby="player-articles-title" aria-label="More articles" class="container mx-auto flex flex-col gap-6">
+                <h2 id="player-articles-title" class="text-32 font-bold leading-10 text-primary">Články</h2>
+                <ul class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                    @@for(i = 0; i < 3; i++) {
+                    <li>
+                        <article aria-labelledby="sub-article-`+i+`" class="group relative">
+                            <div class="relative mb-4 aspect-video overflow-hidden">
+                                <img
+                                    srcset="
+                                        https://picsum.photos/768/432 768w,
+                                        https://picsum.photos/440/250 440w,
+                                        https://picsum.photos/295/166 295w
+                                    "
+                                    sizes="(min-width: 1132px) 408px, 100vw"
+                                    src="default-photo.webp"
+                                    class="w-full object-cover object-center"
+                                    loading="lazy"
+                                    width="408"
+                                    height="229"
+                                    alt=""
+                                />
+                                <div class="absolute right-0 left-0 bottom-2 flex justify-center">
+                                    <time
+                                        class="rounded-[20px_3px_20px_3px] bg-secondary px-4 py-2 text-sm font-bold leading-4 text-white group-hover:bg-primary"
+                                        datetime="YYYY-MM-DD"
+                                    >
+                                        6. 11. 2022
+                                    </time>
+                                </div>
+                            </div>
+                            <h2 id="sub-article-`+i+`" class="px-8 text-center text-xl font-bold leading-25 text-primary group-hover:underline">
+                                Emil Tischler: Budeme končit etapu v Ďolíčku, nejlépe vítězstvím proti Plzni
+                            </h2>
+                            <a href="article.html" class="after:absolute after:inset-0 after:z-40"></a>
+                        </article>
+                    </li>
+                    }
+                </ul>
+                <div class="flex justify-end">
+                    <a href="archive.html" class="btn btn-secondary w-full py-4 sm:w-auto sm:py-2">
+                        <svg width="14" height="13">
+                            <use xlink:href="#button-hamburger"></use>
+                        </svg>
+                        Další články
+                    </a>
+                </div>
+            </section>
+            @@include('./components/bottom-banners.html')
+        </main>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

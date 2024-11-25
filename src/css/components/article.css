@@ -1,0 +1,124 @@
+@layer components {
+    .topstory-thumbnail {
+        width: 100%;
+    }
+    @media (min-width: 800px) {
+        .topstory-thumbnail {
+            width: 60vw;
+            height: 400px;
+        }
+    }
+    @media (min-width: 992px) {
+        .topstory-thumbnail {
+            width: 640px;
+        }
+    }
+    @media (min-width: 1132px) {
+        section[aria-label='TOP articles'].newTopstory .timer__label {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .topstory-thumbnail {
+            width: 50vw;
+            height: 550px;
+        }
+        section[aria-label='TOP articles'].newTopstory .tns-nav {
+            bottom: -26px;
+        }
+        section[aria-label='TOP articles'].newTopstory {
+            margin-bottom: 48px;
+        }
+        section[aria-label='TOP articles'].newTopstory .timer__value {
+            font-size: 40px;
+            line-height: 50px;
+        }
+    }
+    @media (min-width: 1600px) {
+        .topstory-thumbnail {
+            width: 1052px;
+        }
+        section[aria-label='TOP articles'] article > div {
+            @apply justify-end;
+        }
+        section[aria-label='TOP articles'] .tns-nav {
+            @apply container;
+        }
+    }
+    @screen md {
+        .topstory-thumbnail {
+            clip-path: path('M.66,.5S99.12,360.39,316.8,550.5h735.85V.5H.66Z');
+        }
+    }
+
+    section[aria-label='TOP articles'] .tns-nav {
+        @apply absolute bottom-8 left-0 right-0 mx-auto flex items-stretch justify-center gap-2 px-4 md:justify-start;
+    }
+    section[aria-label='TOP articles'] .tns-nav > button {
+        @apply relative z-10 h-4 w-4 rounded-full border border-white transition-all duration-300 ease-linear [&.tns-nav-active]:bg-white;
+    }
+
+    section[aria-label='TOP articles'].newTopstory {
+        margin-bottom: 40px;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-nav {
+        padding: 0;
+        bottom: -16px;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-nav > button {
+        background: #eaecf2;
+        height: 4px;
+        border-radius: 48px;
+        width: 100%;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-outer {
+        position: relative;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-nav .tns-nav-active {
+        background: linear-gradient(to right, #eb0000 50%, #eaecf2 50%);
+    }
+    section[aria-label='TOP articles'].newTopstory .timer__item {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    section[aria-label='TOP articles'].newTopstory .timer {
+        margin-bottom: 24px;
+        display: flex;
+        gap: 32px;
+    }
+    section[aria-label='TOP articles'].newTopstory .timer__value {
+        font-size: 24px;
+        font-weight: 700;
+
+        line-height: 30px;
+        color: #253673;
+    }
+    section[aria-label='TOP articles'].newTopstory .timer__label {
+        font-weight: 700;
+        color: #8b8f8e;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-inner {
+        height: 100%;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-outer {
+        height: 100%;
+    }
+    section[aria-label='TOP articles'].newTopstory .tns-ovh {
+        height: 100%;
+    }
+    @media (max-width: 1132px) {
+        section[aria-label='TOP articles'].newTopstory .container {
+            max-width: 100% !important;
+            padding: 0;
+        }
+        section[aria-label='TOP articles'].newTopstory article img {
+            width: 100%;
+        }
+        section[aria-label='TOP articles'].newTopstory .newTopstory-aside {
+            padding: 0 16px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Realizační tým U19 – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10">
+            <main aria-labelledby="staff-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <h1 id="staff-title" class="mb-2 text-32 font-bold leading-40 text-primary">Realizační tým U19</h1>
+
+                    @@include('./components/youth-menu.html', {'page': 'staff'})
+
+                    <ul class="grid grid-cols-2 gap-6 pt-4 xs:grid-cols-3 sm:grid-cols-4">
+                        @@for(i = 0; i < 2; i++) {
+                        <li>
+                            <div class="relative border-b-4 border-b-secondary">
+                                <img
+                                    src="https://picsum.photos/320/480"
+                                    width="160"
+                                    height="240"
+                                    class="h-[240px] w-full object-contain object-bottom"
+                                    loading="lazy"
+                                    alt=""
+                                />
+                            </div>
+                            <span class="mb-2 block w-full bg-gray px-2 py-1 text-center text-sm text-secondary">Hlavní trenér</span>
+                            <h2 class="text-center font-bold leading-22 group-hover:underline">
+                                <span class="text-sm leading-normal">Alireza</span><br />Jahanbakhsh
+                            </h2>
+                        </li>
+                        <li>
+                            <div class="relative border-b-4 border-b-secondary">
+                                <img
+                                    src="https://picsum.photos/320/480"
+                                    width="160"
+                                    height="240"
+                                    class="h-[240px] w-full object-contain object-bottom"
+                                    loading="lazy"
+                                    alt=""
+                                />
+                            </div>
+                            <span class="mb-2 block w-full bg-gray px-2 py-1 text-center text-sm text-secondary">Asistent trenéra</span>
+                            <h2 class="text-center font-bold leading-22 group-hover:underline">
+                                <span class="text-sm leading-normal">Jaroslav</span><br />Novák
+                            </h2>
+                        </li>
+                        <li>
+                            <div class="relative border-b-4 border-b-secondary">
+                                <img
+                                    src="https://picsum.photos/320/480"
+                                    width="160"
+                                    height="240"
+                                    class="h-[240px] w-full object-contain object-bottom"
+                                    loading="lazy"
+                                    alt=""
+                                />
+                            </div>
+                            <span class="mb-2 block w-full bg-gray px-2 py-1 text-center text-sm text-secondary">Trenér brankářů</span>
+                            <h2 class="text-center font-bold leading-22 group-hover:underline">
+                                <span class="text-sm leading-normal">Pavel</span><br />Dvořáček
+                            </h2>
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'seasons'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

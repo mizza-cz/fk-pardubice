@@ -1,0 +1,105 @@
+@layer base {
+    em,
+    i {
+        @apply italic;
+    }
+
+    b,
+    strong {
+        @apply font-bold;
+    }
+
+    .typography {
+        @apply font-light;
+    }
+
+    /* Paragraphs */
+    .typography p {
+        @apply text-base leading-6 [&:not(:last-child)]:mb-6;
+    }
+
+    /* Links */
+    .typography a {
+        @apply text-primary underline hover:no-underline;
+    }
+
+    /* Headings */
+    .typography h1 {
+        @apply text-[2rem] leading-[38px];
+    }
+    .typography h2 {
+        @apply text-2xl;
+    }
+    .typography h3 {
+        @apply text-xl;
+    }
+    .typography h4 {
+        @apply text-lg;
+    }
+    .typography h5 {
+        @apply text-base;
+    }
+    .typography h6 {
+        @apply text-sm;
+    }
+    .typography h1,
+    .typography h2,
+    .typography h3,
+    .typography h4,
+    .typography h5,
+    .typography h6 {
+        @apply font-bold text-secondary [&:not(:last-child)]:mb-4;
+    }
+
+    /* Images/Embeds */
+    .typography img,
+    .typography iframe {
+        @apply h-auto max-w-full;
+    }
+    .typography img[style*='float: left'] {
+        @apply mr-4 [&:not(:last-child)]:mb-6;
+    }
+    .typography img[style*='float: right'] {
+        @apply ml-4 [&:not(:last-child)]:mb-6;
+    }
+    .typography iframe[src*='youtube.com/'] {
+        @apply aspect-video !h-auto !w-full;
+    }
+
+    /* Lists */
+    .typography ul {
+        @apply mb-6 pl-6;
+    }
+    .typography ul li {
+        @apply list-disc [&:not(:last-child)]:mb-2;
+    }
+    .typography ul li::marker {
+        @apply text-primary;
+    }
+    .typography ol {
+        @apply mb-6 pl-6;
+    }
+    .typography ol li {
+        @apply list-decimal [&:not(:last-child)]:mb-2;
+    }
+    .typography ol li::marker {
+        @apply text-primary;
+    }
+
+    /* Tables */
+    .typography table,
+    table.styled {
+        @apply w-full border-collapse align-top;
+    }
+    .typography div[style*='overflow-x: auto']:not(:last-child) {
+        @apply mb-6;
+    }
+    .typography table th,
+    table.styled th {
+        @apply border-b border-b-gray px-4 py-2 text-left font-bold;
+    }
+    .typography table td,
+    table.styled td {
+        @apply border-b border-b-gray px-4 py-2 leading-6;
+    }
+}

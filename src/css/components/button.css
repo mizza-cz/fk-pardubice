@@ -1,0 +1,16 @@
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-4 rounded-[20px_3px_20px_3px] py-2 px-6 text-base font-bold uppercase leading-22 transition-all 
+            duration-150 ease-linear;
+    }
+
+    /* Secondary */
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-primary-dark;
+    }
+
+    /* Secondary */
+    .btn-secondary {
+        @apply bg-secondary text-white hover:bg-secondary-dark;
+    }
+}

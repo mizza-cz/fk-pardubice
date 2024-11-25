@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Soupiska A-tým 2022/23 – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10">
+            <main aria-labelledby="roster-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <h1 id="roster-title" class="mb-2 text-32 font-bold leading-40 text-primary">Soupiska A-tým</h1>
+
+                    <div class="flex flex-col gap-2">
+                        <section class="border-b border-b-gray pb-6" aria-labelledby="roster-goalies-title">
+                            <h2
+                                id="roster-goalies-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-22 text-primary lg:top-desktopPadding"
+                            >
+                                Brankáři
+                            </h2>
+                            <ul class="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-4">
+                                @@for(i = 0; i < 3; i++) {
+                                <li class="group relative">
+                                    <div class="relative mb-2 border-b-4 border-b-secondary group-hover:border-b-primary">
+                                        <img
+                                            src="https://picsum.photos/320/480"
+                                            width="160"
+                                            height="240"
+                                            class="h-[240px] w-full object-contain object-bottom"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <span
+                                            class="absolute bottom-0 left-0 z-10 flex aspect-square w-10 items-center justify-center bg-gray text-xl font-bold leading-25 text-secondary"
+                                        >
+                                            17
+                                        </span>
+                                    </div>
+                                    <h3 class="text-center font-bold leading-22 group-hover:underline">
+                                        <span class="text-sm leading-normal">Alireza</span><br />Jahanbakhsh
+                                    </h3>
+                                    <a href="player.html" class="after:absolute after:inset-0" title="Přejít na profil hráče"></a>
+                                </li>
+                                }
+                            </ul>
+                        </section>
+                        <section class="border-b border-b-gray pb-6" aria-labelledby="roster-defenders-title">
+                            <h2
+                                id="roster-defenders-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-22 text-primary lg:top-desktopPadding"
+                            >
+                                Obránci
+                            </h2>
+                            <ul class="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-4">
+                                @@for(i = 0; i < 6; i++) {
+                                <li class="group relative">
+                                    <div class="relative mb-2 border-b-4 border-b-secondary group-hover:border-b-primary">
+                                        <img
+                                            src="https://picsum.photos/320/480"
+                                            width="160"
+                                            height="240"
+                                            class="h-[240px] w-full object-contain object-bottom"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <span
+                                            class="absolute bottom-0 left-0 z-10 flex aspect-square w-10 items-center justify-center bg-gray text-xl font-bold leading-25 text-secondary"
+                                        >
+                                            17
+                                        </span>
+                                    </div>
+                                    <h3 class="text-center font-bold leading-22 group-hover:underline">
+                                        <span class="text-sm leading-normal">Alireza</span><br />Jahanbakhsh
+                                    </h3>
+                                    <a href="player.html" class="after:absolute after:inset-0" title="Přejít na profil hráče"></a>
+                                </li>
+                                }
+                            </ul>
+                        </section>
+                        <section class="border-b border-b-gray pb-6" aria-labelledby="roster-midfielders-title">
+                            <h2
+                                id="roster-midfielders-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-22 text-primary lg:top-desktopPadding"
+                            >
+                                Záložníci
+                            </h2>
+                            <ul class="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-4">
+                                @@for(i = 0; i < 8; i++) {
+                                <li class="group relative">
+                                    <div class="relative mb-2 border-b-4 border-b-secondary group-hover:border-b-primary">
+                                        <img
+                                            src="https://picsum.photos/320/480"
+                                            width="160"
+                                            height="240"
+                                            class="h-[240px] w-full object-contain object-bottom"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <span
+                                            class="absolute bottom-0 left-0 z-10 flex aspect-square w-10 items-center justify-center bg-gray text-xl font-bold leading-25 text-secondary"
+                                        >
+                                            17
+                                        </span>
+                                    </div>
+                                    <h3 class="text-center font-bold leading-22 group-hover:underline">
+                                        <span class="text-sm leading-normal">Alireza</span><br />Jahanbakhsh
+                                    </h3>
+                                    <a href="player.html" class="after:absolute after:inset-0" title="Přejít na profil hráče"></a>
+                                </li>
+                                }
+                            </ul>
+                        </section>
+                        <section aria-labelledby="roster-forwarders-title">
+                            <h2
+                                id="roster-forwarders-title"
+                                class="sticky top-mobilePadding z-20 bg-white py-4 text-base font-bold leading-22 text-primary lg:top-desktopPadding"
+                            >
+                                Útočníci
+                            </h2>
+                            <ul class="grid grid-cols-2 gap-6 xs:grid-cols-3 sm:grid-cols-4">
+                                @@for(i = 0; i < 5; i++) {
+                                <li class="group relative">
+                                    <div class="relative mb-2 border-b-4 border-b-secondary group-hover:border-b-primary">
+                                        <img
+                                            src="https://picsum.photos/320/480"
+                                            width="160"
+                                            height="240"
+                                            class="h-[240px] w-full object-contain object-bottom"
+                                            loading="lazy"
+                                            alt=""
+                                        />
+                                        <span
+                                            class="absolute bottom-0 left-0 z-10 flex aspect-square w-10 items-center justify-center bg-gray text-xl font-bold leading-25 text-secondary"
+                                        >
+                                            17
+                                        </span>
+                                    </div>
+                                    <h3 class="text-center font-bold leading-22 group-hover:underline">
+                                        <span class="text-sm leading-normal">Alireza</span><br />Jahanbakhsh
+                                    </h3>
+                                    <a href="player.html" class="after:absolute after:inset-0" title="Přejít na profil hráče"></a>
+                                </li>
+                                }
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'seasons'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

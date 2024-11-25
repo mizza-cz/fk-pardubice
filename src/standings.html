@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'Tabulka FORTUNA:LIGA 2022/23 – FK Pardubice'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+        <div class="container mx-auto mb-14 grid grid-cols-3 gap-10 pt-10">
+            <main aria-labelledby="roster-title" class="col-span-3 lg:col-span-2">
+                <div class="xl:px-72">
+                    <h1 id="roster-title" class="mb-2 text-32 font-bold leading-40 text-primary">Tabulka FORTUNA:LIGA 2022/23</h1>
+
+                    @@include('./components/youth-menu.html', {'page': 'standings'})
+
+                    <div class="mt-4 overflow-x-auto lg:mt-2">
+                        <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th class="!text-center uppercase">#</th>
+                                    <th class="uppercase">Tým</th>
+                                    <th class="!text-center uppercase">Z</th>
+                                    <th class="!text-center uppercase">V</th>
+                                    <th class="!text-center uppercase">R</th>
+                                    <th class="!text-center uppercase">P</th>
+                                    <th class="!text-center uppercase">Skóre</th>
+                                    <th class="!text-center uppercase">B</th>
+                                    <th class="!text-center uppercase">RG</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for (i = 1; i < 3; i++) {
+                                <tr>
+                                    <td class="text-center">`+i+`.</td>
+                                    <td class="whitespace-nowrap">
+                                        <div class="flec items-center">
+                                            <img
+                                                src="https://slavia.cz/znaky/2018/sla.png"
+                                                width="24"
+                                                height="24"
+                                                class="mr-2 inline-block"
+                                                loading="lazy"
+                                                alt=""
+                                            />
+                                            SK Slavia Praha
+                                        </div>
+                                    </td>
+                                    <td class="text-center">17</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">39:14</td>
+                                    <td class="text-center"><b>40</b></td>
+                                    <td class="text-center">24</td>
+                                </tr>
+                                }
+                                <tr class="text-primary">
+                                    <td class="text-center">3.</td>
+                                    <td class="whitespace-nowrap">
+                                        <div class="flec items-center">
+                                            <img
+                                                src="https://slavia.cz/znaky/2018/par.png"
+                                                width="24"
+                                                height="24"
+                                                class="mr-2 inline-block"
+                                                loading="lazy"
+                                                alt=""
+                                            />
+                                            FK Pardubice
+                                        </div>
+                                    </td>
+                                    <td class="text-center">17</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">39:14</td>
+                                    <td class="text-center"><b>40</b></td>
+                                    <td class="text-center">24</td>
+                                </tr>
+                                @@for (i = 4; i < 16; i++) {
+                                <tr>
+                                    <td class="text-center">`+i+`.</td>
+                                    <td class="whitespace-nowrap">
+                                        <div class="flec items-center">
+                                            <img
+                                                src="https://slavia.cz/znaky/2018/boh.png"
+                                                width="24"
+                                                height="24"
+                                                class="mr-2 inline-block"
+                                                loading="lazy"
+                                                alt=""
+                                            />
+                                            Bohemians Praha 1905
+                                        </div>
+                                    </td>
+                                    <td class="text-center">17</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">39:14</td>
+                                    <td class="text-center"><b>40</b></td>
+                                    <td class="text-center">24</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div aria-labelledby="standings-legend-title" class="typography mt-4">
+                        <h2 id="standings-legend-title">Legenda tabulky</h2>
+                        <p>
+                            <strong>P</strong> - Pořadí<br />
+                            <strong>Z</strong> - Zápasy<br />
+                            <strong>V</strong> - Výhry<br />
+                            <strong>R</strong> - Remízy<br />
+                            <strong>P</strong> - Prohry<br />
+                            <strong>B</strong> - Body<br />
+                            <strong>Skóre</strong> - vstřelené góly : obdržené góly<br />
+                            <strong>RG</strong> - Rozdíl gólů<br />
+                            <strong>+/-</strong> - Tabulka pravdy<br />
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-span-3 flex flex-col gap-10 lg:col-span-1">
+                <!-- prettier-ignore -->
+                @@include('./components/aside-menu.html', {'page': 'stats'})
+                @@include('./components/aside-menu.html', {'page': 'seasons'})
+                @@include('./components/aside-youtube.html')
+            </aside>
+        </div>
+        <!-- prettier-ignore -->
+        @@include('./components/bottom-section.html')
+        @@include('./components/bottom-partners.html')
+        @@include('./components/footer.html')
+    </body>
+</html>

@@ -1,0 +1,206 @@
+<section aria-labelledby="teams-title" class="mb-10">
+    <div class="mb-10 border-b border-b-primary">
+        <div class="container mx-auto">
+            <h1 id="teams-title" class="text-center text-40 font-bold leading-50 text-primary">TÝMY</h1>
+            <ul role="navigation" class="teams-navigation flex items-center overflow-x-auto lg:flex-wrap lg:justify-center">
+                <li>
+                    <button
+                        class="whitespace-nowrap px-4 pt-4 pb-4 font-bold uppercase leading-26 text-primary"
+                        aria-current="page"
+                        data-source="/ajax-teams.json?category=MUB"
+                        data-category="MUB"
+                    >
+                        Muži B
+                    </button>
+                </li>
+                @@for (i = 0; i < categories.length; i++) {
+                <li>
+                    <button
+                        class="whitespace-nowrap px-4 pt-4 pb-4 font-bold uppercase leading-26 text-primary"
+                        data-source="/ajax-teams.json?category=`+categories[i]+`"
+                        data-category="`+categories[i]+`"
+                    >
+                        `+categories[i]+`
+                    </button>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div id="teams-content-wrapper" class="relative mx-auto grid min-h-[607px] grid-cols-1 gap-10 sm:container lg:grid-cols-3">
+        <div class="col-span-1">
+            <div id="team-menu" class="container mx-auto sm:px-0">
+                <ul class="grid grid-cols-1 gap-2 bg-gray px-8 py-4">
+                    <li>
+                        <a href="roster.html" class="flex items-center gap-4 font-bold uppercase leading-5 text-secondary hover:underline">
+                            <svg width="1" height="5" class="fill-secondary"><use xlink:href="#divider" class="block"></use></svg>
+                            Soupiska
+                        </a>
+                    </li>
+                    <li>
+                        <a href="staff.html" class="flex items-center gap-4 font-bold uppercase leading-5 text-secondary hover:underline">
+                            <svg width="1" height="5" class="fill-secondary"><use xlink:href="#divider" class="block"></use></svg>
+                            Realizační tým
+                        </a>
+                    </li>
+                    <li>
+                        <a href="matches.html" class="flex items-center gap-4 font-bold uppercase leading-5 text-secondary hover:underline">
+                            <svg width="1" height="5" class="fill-secondary"><use xlink:href="#divider" class="block"></use></svg>
+                            Zápasy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <section id="team-matches" aria-label="Team matches">
+                <div class="px-4 py-10 xs:px-8">
+                    <div class="text-center">
+                        <time class="font-bold leading-22" datetime="YYYY-MM-DD">sobota 29. října</time>
+                        <div class="text-sm font-light leading-normal">14. kolo, FORTUNA:LIGA</div>
+                    </div>
+                    <div class="grid grid-cols-heroMatches items-center justify-between gap-4">
+                        <div class="flex justify-start">
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <img
+                                    src="https://www.fchk.cz/znaky/hkr.png"
+                                    width="64"
+                                    height="64"
+                                    class="aspect-square object-contain"
+                                    loading="lazy"
+                                    alt="Team logo"
+                                />
+                                <b class="hidden text-center leading-5 sm:block">Hradec Králové</b>
+                                <b class="block text-center leading-5 sm:hidden">HKR</b>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="match.html" class="group flex justify-center gap-[1px]" title="Přejít na detail zápasu">
+                                <span
+                                    class="grid h-12 w-12 content-center rounded-[20px_3px_3px_3px] bg-secondary text-center text-2xl font-bold leading-8 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                                >
+                                    1
+                                </span>
+                                <span
+                                    class="grid h-12 w-12 content-center rounded-[3px_3px_20px_3px] bg-secondary text-center text-2xl font-bold leading-8 text-white transition-colors duration-150 ease-linear group-hover:bg-secondary-dark"
+                                >
+                                    3
+                                </span>
+                            </a>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <img
+                                    src="/dist/img/logo.svg"
+                                    width="64"
+                                    height="64"
+                                    class="aspect-square object-contain"
+                                    loading="lazy"
+                                    alt="Team logo"
+                                />
+                                <b class="hidden text-center leading-5 sm:block">Pardubice</b>
+                                <b class="block text-center leading-5 sm:hidden">PCE</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-t-secondary px-4 py-10 xs:px-8">
+                    <div class="text-center">
+                        <time class="font-bold leading-22" datetime="YYYY-MM-DD">sobota 29. října</time>
+                        <div class="text-sm font-light leading-normal">14. kolo, FORTUNA:LIGA</div>
+                        <div class="mt-1 flex items-center justify-center gap-2 text-xs font-light">
+                            <svg width="10" height="12">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            CFIG Arena, Pardubice
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-heroMatches items-center justify-between gap-4">
+                        <div class="flex justify-start">
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <img
+                                    src="https://fcviktoria.cz/img/logo.png"
+                                    width="64"
+                                    height="64"
+                                    class="aspect-square object-contain"
+                                    loading="lazy"
+                                    alt="Team logo"
+                                />
+                                <b class="hidden text-center leading-5 sm:block">FC Viktoria Plzeň</b>
+                                <b class="block text-center leading-5 sm:hidden">HKR</b>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <time
+                                class="rounded-[20px_3px_20px_3px] bg-secondary px-6 py-3 text-center text-xl font-bold leading-25 text-white"
+                                datetime="HH:MM"
+                            >
+                                15:00
+                            </time>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="flex flex-col items-center justify-center gap-2">
+                                <img
+                                    src="/dist/img/logo.svg"
+                                    width="64"
+                                    height="64"
+                                    class="aspect-square object-contain"
+                                    loading="lazy"
+                                    alt="Team logo"
+                                />
+                                <b class="hidden text-center leading-5 sm:block">Pardubice</b>
+                                <b class="block text-center leading-5 sm:hidden">PCE</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container col-span-1 mx-auto hidden sm:px-0 lg:col-span-2 lg:block">
+            <ul id="team-articles" class="flex flex-col gap-6">
+                @@for(i = 0; i < 3; i++) {
+                <li class="group relative">
+                    <article aria-labelledby="sub-article-`+i+`" class="grid grid-cols-1 gap-2 sm:grid-cols-articles sm:gap-8">
+                        <div class="relative aspect-video overflow-hidden">
+                            <img
+                                srcset="https://picsum.photos/295/166 295w, https://picsum.photos/440/250 440w"
+                                sizes="(min-width: 672px) 295px, 100vw"
+                                src="default-photo.webp"
+                                class="w-full object-cover object-center"
+                                loading="lazy"
+                                width="295"
+                                height="166"
+                                alt=""
+                            />
+                            <time
+                                class="absolute right-4 bottom-2 rounded-[20px_3px_20px_3px] bg-secondary px-4 py-2 text-sm font-bold leading-4 text-white group-hover:bg-primary"
+                                datetime="YYYY-MM-DD"
+                            >
+                                6. 11. 2022
+                            </time>
+                        </div>
+                        <div class="flex flex-col">
+                            <b class="mb-1 text-xs uppercase leading-15 text-secondary">B-tým</b>
+                            <h2 id="sub-article-`+i+`" class="mb-2 text-xl font-bold leading-26 text-primary group-hover:underline">
+                                Dominik Kostka: Proč je klíčové, aby obránci doplňovali útočníky?
+                            </h2>
+                            <p class="overflow-ellipsis font-light leading-6" style="--text-lines: 3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque pariatur accusamus mollitia ex perspiciatis velit,
+                                quasi recusandae iure culpa magni doloremque, repudiandae voluptates quis tempora neque esse, dolore corporis harum.
+                            </p>
+                        </div>
+                    </article>
+                    <a href="article.html" class="z-40 after:absolute after:inset-0"></a>
+                </li>
+                }
+                <li class="flex justify-end">
+                    <a href="archive.html" class="btn btn-secondary w-full py-4 sm:w-auto sm:py-2">
+                        <svg width="14" height="13">
+                            <use xlink:href="#button-hamburger"></use>
+                        </svg>
+                        Další články
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<script src="/dist/js/ajax-teams.js" async></script>

@@ -1,0 +1,24 @@
+@layer components {
+    [data-gallery-count]::before {
+        content: '';
+        inset: 0;
+        position: absolute;
+        background-color: HSLA(227, 51%, 30%, 0.4);
+        z-index: 1;
+    }
+    [data-gallery-count]::after {
+        content: attr(data-gallery-count);
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        color: #fff;
+        font-size: 2rem;
+        line-height: 40px;
+        font-weight: bold;
+    }
+    [data-gallery-count]:hover::before {
+        background-color: HSLA(227, 51%, 30%, 0.6);
+    }
+}
