@@ -2478,6 +2478,63 @@ dialog::backdrop {
 .topstory-thumbnail {
     width: 100%;
   }
+section[aria-label="TOP articles"].newTopstory {
+    margin-bottom: 40px;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-nav {
+    padding: 0;
+    bottom: -16px;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-outer {
+    position: relative;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-nav .tns-nav-active {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eb0000), color-stop(50%, #eaecf2));
+    background: linear-gradient(to right, #eb0000 50%, #eaecf2 50%);
+  }
+section[aria-label="TOP articles"].newTopstory .timer__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+section[aria-label="TOP articles"].newTopstory .timer {
+    margin-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+  }
+section[aria-label="TOP articles"].newTopstory .timer__value {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #253673;
+  }
+section[aria-label="TOP articles"].newTopstory .timer__label {
+    font-weight: 700;
+    color: #8b8f8e;
+    font-size: 12px;
+    line-height: 22px;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-inner {
+    height: 100%;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-outer {
+    height: 100%;
+  }
+section[aria-label="TOP articles"].newTopstory .tns-ovh {
+    height: 100%;
+  }
 @media (min-width: 800px) {
     .topstory-thumbnail {
       width: 60vw;
@@ -2621,68 +2678,11 @@ section[aria-label="TOP articles"] .tns-nav > button.tns-nav-active {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-section[aria-label="TOP articles"].newTopstory {
-    margin-bottom: 40px;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-nav {
-    padding: 0;
-    bottom: -16px;
-  }
 section[aria-label="TOP articles"].newTopstory .tns-nav > button {
     background: #eaecf2;
     height: 4px;
     border-radius: 48px;
     width: 100%;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-outer {
-    position: relative;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-nav .tns-nav-active {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #eb0000), color-stop(50%, #eaecf2));
-    background: linear-gradient(to right, #eb0000 50%, #eaecf2 50%);
-  }
-section[aria-label="TOP articles"].newTopstory .timer__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-section[aria-label="TOP articles"].newTopstory .timer {
-    margin-bottom: 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 32px;
-  }
-section[aria-label="TOP articles"].newTopstory .timer__value {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    color: #253673;
-  }
-section[aria-label="TOP articles"].newTopstory .timer__label {
-    font-weight: 700;
-    color: #8b8f8e;
-    font-size: 12px;
-    line-height: 22px;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-inner {
-    height: 100%;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-outer {
-    height: 100%;
-  }
-section[aria-label="TOP articles"].newTopstory .tns-ovh {
-    height: 100%;
   }
 @media (max-width: 1132px) {
     section[aria-label="TOP articles"].newTopstory .container {
