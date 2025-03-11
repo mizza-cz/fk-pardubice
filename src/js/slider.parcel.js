@@ -1,9 +1,23 @@
 import { tns } from 'tiny-slider';
 
-const topstory = document.querySelector('.topstory-slider');
-if (topstory) {
-    const topstorySlider = new tns({
-        container: topstory,
+// const topstory = document.querySelectorAll('.topstory-slider, .topstory-slider2');
+// if (topstory) {
+//     const topstorySlider = new tns({
+//         container: topstory,
+//         controls: false,
+//         navPosition: 'bottom',
+//         loop: true,
+//         mouseDrag: true,
+//         autoplay: true,
+//         autoplayButtonOutput: false,
+//         slideBy: 1,
+//     });
+// }
+const topstoryElements = document.querySelectorAll('.topstory-slider, .topstory-slider2');
+
+topstoryElements.forEach((slider) => {
+    new tns({
+        container: slider,
         controls: false,
         navPosition: 'bottom',
         loop: true,
@@ -12,7 +26,7 @@ if (topstory) {
         autoplayButtonOutput: false,
         slideBy: 1,
     });
-}
+});
 
 const matches = document.querySelector('.matches-slider');
 if (matches) {

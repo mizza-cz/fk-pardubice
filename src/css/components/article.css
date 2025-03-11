@@ -122,4 +122,9 @@
             padding: 0 16px;
         }
     }
+    @media (max-width: 680px) {
+        section[aria-label='TOP articles'].newTopstory article img {
+            aspect-ratio: 1920/1800;
+        }
+    }
 }

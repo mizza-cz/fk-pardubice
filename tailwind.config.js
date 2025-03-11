@@ -98,7 +98,6 @@ module.exports = {
             boxShadow: {
                 custom: '0px 0px 30px rgba(234,236,242, .75)',
                 bottomSection: '0px 0px 100px rgba(234,236,242, 1)',
-                
             },
             // Grid
             gridTemplateColumns: {

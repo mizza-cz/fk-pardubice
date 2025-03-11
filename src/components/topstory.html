@@ -36,3 +36,74 @@
         </div>
     </div>
 </section>
+<div class="newTopstory-aside flex h-full flex-col gap-6 md:flex-row lg:hidden">
+    <div class="flex h-full w-full flex-col items-center justify-center border-t-4 border-t-secondary bg-gray py-10">
+        <div class="mb-2 flex flex-col items-center">
+            <img src="/dist/img/oris.png" loading="lazy" width="80px" height="32px" alt="" />
+        </div>
+        <div class="mb-8 text-center">
+            <div class="text-xs font-light">Partnerem příštího zápasu</div>
+        </div>
+        <div class="timer" role="timer" aria-label="A timer, counting down to {{ eventName }}" data-endtime="2024-11-30T02:00">
+            <span class="timer__item" id="timer-days-1">
+                <span class="timer__label timer__label-days" id="countdown-days-label-1">dní</span>
+                <span class="timer__value" id="countdown-days-1">{{ days }}</span>
+            </span>
+            <span class="timer__item" id="timer-hours-1">
+                <span class="timer__label" id="countdown-hours-label-1">hodin</span>
+                <span class="timer__value" id="countdown-hours-1">{{ hours }}</span>
+            </span>
+            <span class="timer__item" id="timer-minutes-1">
+                <span class="timer__label" id="countdown-minutes-label-1">minut</span>
+                <span class="timer__value" id="countdown-minutes-1">{{ minutes }}</span>
+            </span>
+            <span class="timer__item" id="timer-seconds-1">
+                <span class="timer__label" id="countdown-seconds-label-1">vteřin</span>
+                <span class="timer__value" id="countdown-seconds-1">{{ seconds }}</span>
+            </span>
+        </div>
+
+        <div class="mb-8 text-center">
+            <time class="text-xs font-bold">sobota 29. 10. od 18.00 hod</time>
+        </div>
+        <div class="flex justify-center gap-6">
+            <div class="flex">
+                <div class="flex flex-col items-center justify-center gap-2">
+                    <img
+                        src="https://fcviktoria.cz/img/logo.png"
+                        width="64"
+                        height="64"
+                        class="aspect-square object-contain"
+                        loading="lazy"
+                        alt="Team logo"
+                    />
+                    <b class="hidden text-center leading-5 sm:block">FC Viktoria Plzeň</b>
+                    <b class="block text-center leading-5 sm:hidden">HKR</b>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex flex-col items-center justify-center gap-2">
+                    <img src="/dist/img/logo.svg" width="64" height="64" class="aspect-square object-contain" loading="lazy" alt="Team logo" />
+                    <b class="hidden text-center leading-5 text-secondary sm:block">FC Pardubice</b>
+                    <b class="block text-center leading-5 text-secondary sm:hidden">PCE</b>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 flex flex-col items-center">
+            <a href="article.html" role="button" class="btn btn-secondary relative z-10 -lg:hidden">
+                <svg width="14" height="13" class="fill-primary">
+                    <use xlink:href="#tickets"></use>
+                </svg>
+                Vstupenky
+            </a>
+        </div>
+        <div class="mt-8 flex flex-col items-center">
+            <a href="article.html" class="flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                <svg width="12" height="16" class="fill-primary"><use xlink:href="#document"></use></svg>
+                Preview
+            </a>
+        </div>
+    </div>
+</div>
+ 
